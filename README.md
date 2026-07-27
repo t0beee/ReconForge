@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # 🔍 ReconForge v1.0 — Intelligent Attack Surface Mapper
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python)
