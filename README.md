@@ -137,4 +137,3 @@ Only scan systems you **own** or have **explicit written permission** to test.
 ---
 
 <p align="center">ReconForge v5.0 — Built for serious ethical security work 🔐</p>
-=======
