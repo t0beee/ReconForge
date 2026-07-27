@@ -18,11 +18,8 @@ def warn(msg):  print(f"  {Fore.YELLOW}[!]{Style.RESET_ALL} {msg}")
 def bad(msg):   print(f"  {Fore.RED}[-]{Style.RESET_ALL} {msg}")
 
 def pbar(cur, tot, label="", width=38):
-    pct    = cur / tot if tot else 0
-    filled = int(width * pct)
-    bar    = f"{Fore.GREEN}{'█'*filled}{Fore.WHITE}{'░'*(width-filled)}{Style.RESET_ALL}"
     import sys
-    sys.stdout.write(f"\r  {bar} {Fore.CYAN}{cur}/{tot}{Style.RESET_ALL}  {label[:30]:<30}")
+    sys.stdout.write(f"\r  {Fore.BLUE}[*]{Style.RESET_ALL} {cur}/{tot} — {label[:50]:<50}")
     sys.stdout.flush()
     if cur == tot:
         sys.stdout.write("\r" + " "*80 + "\r")

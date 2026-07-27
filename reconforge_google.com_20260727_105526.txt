@@ -1,0 +1,473 @@
+═════════════════════════════════════════════════════════════════
+  RECONFORGE v5.0 — ATTACK SURFACE REPORT
+═════════════════════════════════════════════════════════════════
+    Target                 google.com
+    IP Address             142.251.221.174
+    Scan Time              2026-07-27 10:54:23
+    Risk Rating            HIGH RISK  (score: 28)
+    Findings               0 CRITICAL  2 HIGH  2 MEDIUM  6 LOW
+═════════════════════════════════════════════════════════════════
+
+─────────────────────────────────────────────────────────────────
+  ▶  RISK FINDINGS (Prioritized)
+─────────────────────────────────────────────────────────────────
+    [HIGH    ] Missing Header: Strict-Transport-Security
+               → Browsers can be tricked into using HTTP — enables MITM attacks
+
+    [HIGH    ] Missing Header: Content-Security-Policy
+               → No script source restrictions — XSS attacks can execute freely
+
+    [MEDIUM  ] Missing Header: X-Content-Type-Options
+               → Browser may misinterpret file types — MIME sniffing attacks
+
+    [MEDIUM  ] WAF: No WAF detected
+               → No web application firewall protecting the server
+
+    [LOW     ] Open Port: Port 80/tcp (HTTP)
+               → Unencrypted HTTP — upgrade to HTTPS
+
+    [LOW     ] Missing Header: Referrer-Policy
+               → Browser sends full URL in Referer header — information leakage
+
+    [LOW     ] Missing Header: Permissions-Policy
+               → No restrictions on browser features like camera/mic/location
+
+    [LOW     ] Cookie: Cookie '__Secure-STRP': No HttpOnly, No Secure flag
+               → Insecure cookie flags enable session hijacking
+
+    [LOW     ] Cookie: Cookie 'AEC': No Secure flag
+               → Insecure cookie flags enable session hijacking
+
+    [LOW     ] Cookie: Cookie 'NID': No Secure flag, No SameSite
+               → Insecure cookie flags enable session hijacking
+
+    [INFO    ] Open Port: Port 443/tcp (HTTPS)
+               → Standard HTTPS — check certificate and headers
+
+
+─────────────────────────────────────────────────────────────────
+  ▶  CHANGES SINCE LAST SCAN  (prev: 2026-07-26 19:11:03)
+─────────────────────────────────────────────────────────────────
+    [REMOVED] Port closed: 80/tcp
+    [REMOVED] Port closed: 443/tcp
+    [REMOVED] Subdomain gone: cloud.google.com
+    [REMOVED] Subdomain gone: upload.google.com
+    [REMOVED] Subdomain gone: help.google.com
+    [REMOVED] Subdomain gone: vpn.google.com
+    [REMOVED] Subdomain gone: ns2.google.com
+    [REMOVED] Subdomain gone: finance.google.com
+    [REMOVED] Subdomain gone: accounts.google.com
+    [REMOVED] Subdomain gone: ns1.google.com
+    [REMOVED] Subdomain gone: registry.google.com
+    [REMOVED] Subdomain gone: billing.google.com
+    [REMOVED] Subdomain gone: search.google.com
+    [REMOVED] Subdomain gone: images.google.com
+    [REMOVED] Subdomain gone: ldap.google.com
+    [REMOVED] Subdomain gone: mail.google.com
+    [REMOVED] Subdomain gone: analytics.google.com
+    [REMOVED] Subdomain gone: smtp.google.com
+    [REMOVED] Subdomain gone: shop.google.com
+    [REMOVED] Subdomain gone: www.google.com
+    [REMOVED] Subdomain gone: nexus.google.com
+    [REMOVED] Subdomain gone: m.google.com
+    [REMOVED] Subdomain gone: admin.google.com
+    [REMOVED] Subdomain gone: files.google.com
+    [REMOVED] Subdomain gone: uploads.google.com
+    [REMOVED] Subdomain gone: account.google.com
+    [REMOVED] Subdomain gone: vault.google.com
+    [REMOVED] Subdomain gone: ns4.google.com
+    [REMOVED] Subdomain gone: id.google.com
+    [REMOVED] Subdomain gone: download.google.com
+    [REMOVED] Subdomain gone: web.google.com
+    [REMOVED] Subdomain gone: api.google.com
+    [REMOVED] Subdomain gone: support.google.com
+    [REMOVED] Subdomain gone: mobile.google.com
+    [REMOVED] Subdomain gone: sandbox.google.com
+    [REMOVED] Subdomain gone: ns3.google.com
+    [REMOVED] Subdomain gone: blog.google.com
+    [REMOVED] Subdomain gone: store.google.com
+    [REMOVED] Subdomain gone: email.google.com
+    [REMOVED] Subdomain gone: docs.google.com
+    [REMOVED] Technology removed: Apache
+    [CHANGED] IP address: 172.217.24.142 → 142.251.221.174 ⚠️ Possible DNS hijack!
+    [CHANGED] Header now present (fixed): Referrer-Policy ✅
+    [CHANGED] Header now present (fixed): Content-Security-Policy ✅
+    [CHANGED] Header now present (fixed): Permissions-Policy ✅
+    [CHANGED] Header now present (fixed): X-Content-Type-Options ✅
+    [CHANGED] Header now present (fixed): Strict-Transport-Security ✅
+    [CHANGED] Risk score: 28 → 0  (↓ BETTER)
+
+─────────────────────────────────────────────────────────────────
+  ▶  GEO-IP LOCATION
+─────────────────────────────────────────────────────────────────
+    Country                United States
+    Region                 California
+    City                   Mountain View
+    ISP                    Google LLC
+    Org / ASN              Google LLC  AS15169 Google LLC
+    Timezone               America/Los_Angeles
+    Hosting                Yes — Cloud/Datacenter
+    Coordinates            37.4225, -122.085
+
+─────────────────────────────────────────────────────────────────
+  ▶  WHOIS
+─────────────────────────────────────────────────────────────────
+    Registrar              MarkMonitor Inc.
+    Created                N/A
+    Expires                N/A
+    Updated                N/A
+    Name Servers           
+    Status                 N/A
+    Org                    N/A
+
+─────────────────────────────────────────────────────────────────
+  ▶  SSL / TLS CERTIFICATE
+─────────────────────────────────────────────────────────────────
+    Valid                  True
+    Subject                *.google.com
+    Issuer                 Google Trust Services
+    Organization           N/A
+    Protocol               TLSv1.3
+    Expires                2026-09-21  (56 days remaining)
+    Self-Signed            False
+    Weak Cipher            False
+    SANs                   *.google.com, *.appengine.google.com, *.bdn.dev, *.origin-test.bdn.dev, *.cloud.google.com, *.crowdsource.google.com, *.datacompute.google.com, *.google.ca
+
+─────────────────────────────────────────────────────────────────
+  ▶  WAF / FIREWALL DETECTION
+─────────────────────────────────────────────────────────────────
+    Detected               False
+    Name                   None
+
+─────────────────────────────────────────────────────────────────
+  ▶  DNS RECORDS
+─────────────────────────────────────────────────────────────────
+    A        142.251.221.174
+    AAAA     2404:6800:4007:830::200e
+    MX       10 smtp.google.com.
+    NS       ns2.google.com.
+    NS       ns3.google.com.
+    NS       ns4.google.com.
+    NS       ns1.google.com.
+    TXT      "docusign=1b0a6754-49b1-4db5-8540-d2c12664b289"
+    TXT      "globalsign-smime-dv=CDYX+XFHUw2wml6/Gb8+59BsH31KzUr6c1l2BPvqKX8="
+    TXT      "v=spf1 include:_spf.google.com ~all"
+    TXT      "Z29vZ2xl"
+    TXT      "google-site-verification=wD8N7i1JTNTkezJ49swvWW48f8_9xveREV4oB-0Hf5o"
+    TXT      "onetrust-domain-verification=6d685f1d41a94696ad7ef771f68993e0"
+    TXT      "docusign=05958488-4752-4ef2-95eb-aa7ba8a3bd0e"
+    TXT      "MS=E4A68B9AB2BB9670BCE15412F62916164C0B20BB"
+    TXT      "facebook-domain-verification=22rm551cu4k0ab0bxsw536tlds4h95"
+    TXT      "cisco-ci-domain-verification=47c38bc8c4b74b7233e9053220c1bbe76bcc1cd33c7acf7acd36cd6a5332004b"
+    TXT      "onetrust-domain-verification=0d477fe608074e6f9c12bca7826035cc"
+    TXT      "apple-domain-verification=30afIBcvSuDV2PLX"
+    TXT      "work-accounts-domain-verification=Tcj6JjIMZOw2KsSEw2Nt2rLae89tN6"
+    TXT      "google-site-verification=TV9-DBe4R80X4v0M4U_bd_J9cpOJM0nikft0jAgjmsQ"
+    TXT      "google-site-verification=4ibFUgB-wXLQ_S7vsXVomSTVamuOXBiVAzpR5IZ87D0"
+    SOA      ns1.google.com. dns-admin.google.com. 953810495 900 900 1800 60
+
+─────────────────────────────────────────────────────────────────
+  ▶  SUBDOMAINS  (38 found / 185 tested)
+─────────────────────────────────────────────────────────────────
+    www.google.com                                     142.251.153.119
+    mail.google.com                                    142.250.67.37
+    admin.google.com                                   142.250.66.14
+    blog.google.com                                    142.251.223.233
+    api.google.com                                     172.217.24.196
+    vpn.google.com                                     64.9.224.70
+    shop.google.com                                    192.178.211.92
+    support.google.com                                 172.217.24.14
+    docs.google.com                                    142.251.223.14
+    help.google.com                                    142.251.222.174
+    m.google.com                                       142.251.221.107
+    mobile.google.com                                  142.251.221.107
+    smtp.google.com                                    192.178.211.27
+    ns1.google.com                                     216.239.32.10
+    ns2.google.com                                     216.239.34.10
+    email.google.com                                   142.251.222.174
+    web.google.com                                     142.251.43.142
+    sandbox.google.com                                 192.178.211.81
+    id.google.com                                      142.250.67.35
+    accounts.google.com                                192.178.211.84
+    account.google.com                                 142.251.221.110
+    images.google.com                                  142.251.43.46
+    files.google.com                                   142.251.43.142
+    upload.google.com                                  142.251.222.143
+    uploads.google.com                                 108.170.217.160
+    download.google.com                                142.251.223.228
+    billing.google.com                                 142.251.43.46
+    analytics.google.com                               216.239.34.181
+    search.google.com                                  142.251.43.142
+    ns3.google.com                                     216.239.36.10
+    ns4.google.com                                     216.239.38.10
+    vault.google.com                                   142.250.182.78
+    store.google.com                                   172.217.24.174
+    finance.google.com                                 142.251.221.110
+    cloud.google.com                                   142.251.222.142
+    registry.google.com                                172.217.24.14
+    nexus.google.com                                   142.251.222.174
+    ldap.google.com                                    216.239.32.58
+
+─────────────────────────────────────────────────────────────────
+  ▶  OPEN PORTS  (2 found)
+─────────────────────────────────────────────────────────────────
+    PORT       SERVICE            RISK       DETAIL
+    ----------------------------------------------------------
+    80/tcp     HTTP               LOW        Unencrypted HTTP — upgrade to HTTPS
+    443/tcp    HTTPS              INFO       Standard HTTPS — check certificate and h
+
+─────────────────────────────────────────────────────────────────
+  ▶  HTTP HEADERS  (Security Score: 29%)
+─────────────────────────────────────────────────────────────────
+    URL                    https://www.google.com/
+    Status Code            200
+    Server                 gws
+    X-Powered-By           N/A
+
+    Header Audit:
+      [PRESENT ✓] X-Frame-Options
+      [PRESENT ✓] X-XSS-Protection
+      [MISSING ✗] Strict-Transport-Security  [HIGH]
+                   → Browsers can be tricked into using HTTP — enables MITM attacks
+      [MISSING ✗] Content-Security-Policy  [HIGH]
+                   → No script source restrictions — XSS attacks can execute freely
+      [MISSING ✗] X-Content-Type-Options  [MEDIUM]
+                   → Browser may misinterpret file types — MIME sniffing attacks
+      [MISSING ✗] Referrer-Policy  [LOW]
+                   → Browser sends full URL in Referer header — information leakage
+      [MISSING ✗] Permissions-Policy  [LOW]
+                   → No restrictions on browser features like camera/mic/location
+
+    Cookies:
+      __Secure-STRP                  No HttpOnly, No Secure flag
+      AEC                            No Secure flag
+      NID                            No Secure flag, No SameSite
+
+─────────────────────────────────────────────────────────────────
+  ▶  DETECTED TECHNOLOGIES
+─────────────────────────────────────────────────────────────────
+    • Apache
+
+─────────────────────────────────────────────────────────────────
+  ▶  ROBOTS.TXT & SITEMAP
+─────────────────────────────────────────────────────────────────
+    Found                  True
+    Disallowed paths:
+      /search
+      /sdch
+      /groups
+      /index.html?
+      /?
+      /goto?
+      /?hl=*&
+      /?hl=*&*&gws_rd=ssl
+      /imgres
+      /u/
+      /setprefs
+      /m?
+      /m/
+      /wml?
+      /wml/?
+      /wml/search?
+      /xhtml?
+      /xhtml/?
+      /xhtml/search?
+      /xml?
+      /imode?
+      /imode/?
+      /imode/search?
+      /jsky?
+      /jsky/?
+      /jsky/search?
+      /pda?
+      /pda/?
+      /pda/search?
+      /local?
+      /local_url
+      /products?
+      /product_
+      /products_
+      /products;
+      /print
+      /books/
+      /bkshp?*dq=
+      /bkshp?*q=
+      /books?*dq=
+      /books?*q=
+      /books?*qtid=
+      /books?*output=
+      /books?*pg=
+      /books?*jtp=
+      /books?*jscmd=
+      /books?*buy=
+      /books?*zoom=
+      /patents?
+      /patents/download/
+      /patents/pdf/
+      /patents/related/
+      /scholar
+      /citations?
+      /s?
+      /maps?
+      /mapslt?
+      /maphp?
+      /maps/
+      /maps/api/js/
+      /mld?
+      /staticmap?
+      /help/maps/streetview/partners/welcome/
+      /help/maps/indoormaps/partners/
+      /lochp?
+      /ie?
+      /uds/
+      /transit?
+      /trends?
+      /trends/music?
+      /trends/hottrends?
+      /trends/viz?
+      /trends/embed.js?
+      /trends/fetchComponent?
+      /trends/beta
+      /trends/topics
+      /trends/explore?
+      /trends/api
+      /musica
+      /musicl
+      /musics
+      /urchin_test/
+      /movies?
+      /wapsearch?
+      /reviews/search?
+      /cbk
+      /profiles/me
+      /s2/profiles/me
+      /s2
+      /transconsole/portal/
+      /aclk
+      /tbproxy/
+      /support/forum/search?
+      /reviews/polls/
+      /hosted/images/
+      /accounts/ClientLogin
+      /accounts/ClientAuth
+      /accounts/o8
+      /quality_form?
+      /labs/popgadget/search
+      /compressiontest/
+      /analytics/feeds/
+      /analytics/partners/comments/
+      /analytics/portal/
+      /analytics/uploads/
+      /alerts/
+      /phone/compare/?
+      /travel/clk
+      /travel/lodging/clk
+      /travel/entity
+      /travel/search
+      /travel/flights/booking
+      /travel/flights/s/
+      /travel/flights/search
+      /travel/hotels/stories
+      /travel/hotels/*/stories
+      /travel/story
+      /hotelfinder/rpc
+      /hotels/rpc
+      /evaluation/
+      /forms/perks/
+      /shopping/suppliers/search
+      /edu/cs4hs/
+      /trustedstores/s/
+      /trustedstores/tm2
+      /trustedstores/verify
+      /shopping?
+      /shopping/product/
+      /shopping/seller
+      /shopping/ratings/account/metrics
+      /shopping/ratings/merchant/immersivedetails
+      /shopping/reviewer
+      /shopping/search
+      /shopping/deals
+      /storefront
+      /storepicker
+      /about/careers/applications/candidate-prep
+      /about/careers/applications/connect-with-a-googler
+      /about/careers/applications/jobs/results?page=
+      /about/careers/applications/jobs/results/?page=
+      /about/careers/applications/jobs/results?*&page=
+      /about/careers/applications/jobs/results/?*&page=
+      /landing/signout.html
+      /gallery/
+      /landing/now/ontap/
+      /maps/reserve/api/
+      /maps/reserve/search
+      /maps/reserve/bookings
+      /maps/reserve/settings
+      /maps/reserve/manage
+      /maps/reserve/payment
+      /maps/reserve/receipt
+      /maps/reserve/sellersignup
+      /maps/reserve/feedback
+      /maps/reserve/terms
+      /maps/reserve/m/
+      /maps/reserve/b/
+      /maps/reserve/partner-dashboard
+      /local/cars
+      /local/dealership/
+      /local/dining/
+      /local/place/products/
+      /local/place/reviews/
+      /local/place/rap/
+      /local/tab/
+      /localservices/
+      /nonprofits/account/
+      /uviewer
+      /landing/cmsnext-root/
+      /maps/api/js/
+      /maps/api/place/js/
+      /maps/api/staticmap
+      /maps/api/streetview
+      /about/careers/applications/jobs/results
+      /about/careers/applications-a/jobs/results
+      /groups
+      /hosted/images/
+      /m/
+    *** Interesting paths (hidden endpoints):
+      *** /maps/api/js/
+      *** /trends/api
+      *** /urchin_test/
+      *** /accounts/ClientLogin
+      *** /compressiontest/
+      *** /analytics/uploads/
+      *** /maps/reserve/api/
+      *** /maps/reserve/manage
+      *** /maps/reserve/partner-dashboard
+      *** /maps/api/js/
+      *** /maps/api/place/js/
+      *** /maps/api/staticmap
+      *** /maps/api/streetview
+    Sitemaps:
+      https://www.google.com/sitemap.xml
+
+─────────────────────────────────────────────────────────────────
+  ▶  WORDPRESS SCAN
+─────────────────────────────────────────────────────────────────
+    WordPress not detected on this target
+
+─────────────────────────────────────────────────────────────────
+  ▶  PHP FILE ENUMERATION  (0 found / 59 tested)
+─────────────────────────────────────────────────────────────────
+    No PHP files found
+
+─────────────────────────────────────────────────────────────────
+  ▶  DIRECTORY BRUTEFORCE  (5 found / 81 tested)
+─────────────────────────────────────────────────────────────────
+    [301] /files/
+    [302] /accounts/
+    [301] /search/
+    [301] /security/
+    [301] /health/
+
+═════════════════════════════════════════════════════════════════
+  ReconForge v5.0 — For authorized and ethical use only
+  Generated: 2026-07-27 10:55:26
+═════════════════════════════════════════════════════════════════
