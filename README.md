@@ -1,5 +1,5 @@
 <<<<<<< HEAD
-# 🔍 ReconForge v.0 — Intelligent Attack Surface Mapper
+# 🔍 ReconForge v1.0 — Intelligent Attack Surface Mapper
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue?style=for-the-badge&logo=python)
 ![Version](https://img.shields.io/badge/Version-5.0-red?style=for-the-badge)
@@ -12,7 +12,7 @@
 ## ⚡ Install & Run
 
 ```bash
-git clone https://github.com/yourusername/ReconForge.git
+git clone https://github.com/t0beee/ReconForge.git
 cd ReconForge
 pip install -r requirements.txt
 python reconforge.py example.com --all
